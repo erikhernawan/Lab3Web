@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Membuat Form</title>
+    <h1>Tugas Pratikum Membuat Form</h1>
+    <link rel="stylesheet" type="text/css" href="Lab3_Tugas_Form.css">
+    <style>
+        form p > label {
+        display: inline-block;
+        width: 100px;
+        }
+        form input[type="text"], form textarea {
+        border: 1px solid #197a43;
+        }
+        form input[type="submit"] {
+        border: 1px solid #197a43;
+        background-color: #197a43;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul id="navigasi">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Keterangan</a></li>
+            <li><a href="#">Tentang</a>
+            <li><a href="#">Bergabung</a>
+                <ul>
+                    <li><a href="index.php">Daftar</a></li>
+                    <li><a href="index.php">Masuk</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="form">
+        <form action="contact.php" method="POST">
+            <fieldset>
+            <legend>Daftar</legend>
+            <p>
+                <label>Nama Depan:</label>
+                <input type="text" name="nama" placeholder="Nama Depan..." />
+            </p>
+            <p>
+                <label>Nama Belakang:</label>
+                <input type="text" name="username" placeholder="Nama Belakang..." />
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Email Anda..." />
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Passowrd..." />
+            </p>
+            <p>
+                <label>Jenis kelamin:</label>
+                <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+            </p>
+            <p>
+                <label>Agama:</label>
+                <select name="agama">
+                    <option value="islam">Islam</option>
+                    <option value="kristen">Kristen</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="budha">Budha</option>
+                </select>
+            </p>
+            <p>Jurusan :</p>
+            <select name="Jurusan" size="5" multiple="multiple">
+            <optgroup label="FATEK"></optgroup>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+            <optgroup label="FEBIS"></optgroup>
+            <option value="Manajemen">Manajemen</option>
+            <option value="Akuntansi">Akuntansi</option>
+            <option value="Hukum">Hukum</option>
+            </select>
+            <p>
+                <input type="submit" name="submit" value="Daftar" />
+            </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
